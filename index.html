@@ -37,9 +37,12 @@
                         <a href="#" class="nav_link">Contact </a>
                     </li>
                 </ul>
+                <div class="nav_close" id="nav-close">
+                    <i class="bx bx-x"></i>
+                </div>
             </div>
             <div class="nav_btns">
-                <div class="login_toggle" id="login-toggle">
+                <div class="login_toggle" id="login-button">
                     <i class="bx bx-user"></i>
                 </div>
                 <div class="nav_shop" id="cart-shop">
@@ -56,7 +59,7 @@
 <main>
     <section id="my-Cart">
         <div class="cart" id="cart">
-            <i class="bx bx-x cart_close"></i>
+            <i class="bx bx-x cart_close" id="cart-close"></i>
             <h2 class="cart_title-center"> My Cart</h2>
             <div class="cart_container">
                 <article class="cart_card">
@@ -144,7 +147,7 @@
     <section id="my-Login">
         <div class="login" id="login">
             <i class="bx bx-x login_close" id="login-close"></i>
-            <h2 class="login_title-center"></h2>
+            <h2 class="login_title-center">Login</h2>
             <form action="" class="login_form grid">
                 <div class="login_content">
                     <label for="" class="login_label">Email</label>
@@ -166,6 +169,7 @@
             </form>
         </div>
     </section>
+    
     <section id="home container">
         <div class="swiper home-swiper container">
             <div class="swiper-wrapper">
@@ -379,15 +383,12 @@
             </div>
         </div>
 
-        
-
 
     </section>
-
-        <section class="step section container">
+    <section class="step section container">
         <div class="step_bg">
-            <h2 class="secton_title text-center">How to order products <br> from E-shopper</h2>
-
+            <h2 class="section_title text-center">How to order products <br> from E-shopper</h2>
+        
             <div class="steps_container grid">
                 <!-- Step 1 -->
                 <div class="steps_card">
@@ -419,9 +420,71 @@
             </div>
         </div>
     </section>
+    <section class="newsletter section">
+        <div class="newsletter_container container">
+            <h2 class="section_title">Our Newsletter</h2>
+            <div class="newsletter_description">
+                Promotion new products and sales. Directly to your inbox
+            </div>
+            <form action="" class="newsletter_form">
+                <input type="text" placeholder="Enter your Email" class="newsletter_input">
+                <button class="button">Subcribe</button>
+            </form>
+        </div>
+    </section>
 
   
 </main>
+<footer class="footer section">
+    <div class="footer_container container grid">
+        <!-- Footer content 1-->
+        <div class="footer_content">
+            <a href="#" class="footer_logo">
+                <i class="bx bxs-shopping-bags footer_logo-icon"></i>E-shopper
+            </a>
+            <p class="footer_description">Enjoy the biggest sale <br> of your life.</p>
+            <div class="footer_social">
+                <a href="#" class="footer_social-link"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="footer_social-link"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="footer_social-link"><i class="bx bxl-linkedin"></i></a>
+            </div>
+        </div>
+        <!-- Footer content 2-->
+        <div class="footer_content">
+            <h3 class="footer_title">About</h3>
+            <ul class="footer_links">
+                <li><a href="#" class="footer_link">About Us</a></li>
+                <li><a href="#" class="footer_link">Customer Support</a></li>
+                <li><a href="#" class="footer_link">Support Center</a></li>
+            </ul>
+        </div>
+        <!-- Footer content 3-->
+        <div class="footer_content">
+            <h3 class="footer_title">Our Services</h3>
+            <ul class="footer_links">
+                <li><a href="#" class="footer_link">Shop</a></li>
+                <li><a href="#" class="footer_link">Discount</a></li>
+                <li><a href="#" class="footer_link">Shipping mode</a></li>
+            </ul>
+        </div>
+        <!-- Footer content 4-->
+        <div class="footer_content">
+            <h3 class="footer_title">Our Company</h3>
+            <ul class="footer_links">
+                <li><a href="#" class="footer_link">Register</a></li>
+                <li><a href="#" class="footer_link">Contact us</a></li>
+                <li><a href="#" class="footer_link">About us</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <span class="footer_copy">&#169; 2024. All rights reserved</span>
+</footer>
+
+<!-- scroll up-->
+<a href="#" class="scrollup" id="scroll-up">
+    <i class="bx bx-up-arrow-alt scroll_icon"></i>
+</a>
    
 <!--  <footer class="bg-dark text-light py-3">
         <div class="container">
