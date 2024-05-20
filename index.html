@@ -150,13 +150,13 @@
             <h2 class="login_title-center">Login</h2>
             <form action="" class="login_form grid">
                 <div class="login_content">
-                    <label for="" class="login_label">Email</label>
-                    <input type="email" class="login_input">
+                    <label for="email" class="login_label">Email</label>
+                    <input type="email" id="email" name="email" class="login_input">
                 </div>
 
                 <div class="login_content">
-                    <label for="" class="login_label">Password</label>
-                    <input type="password" class="login_input">
+                    <label for="password" class="login_label">Password</label>
+                    <input type="password" id="password" name="password" class="login_input">
                 </div>
                 
                 <div>
@@ -170,97 +170,13 @@
         </div>
     </section>
     
-    <section id="home container">
+    <section id="home_container" >
         <div class="swiper home-swiper container">
-            <div class="swiper-wrapper">
-                <!-- Home Swiper 1-->
-                <section class="swiper-slide">
-                    <div class="home_content grid">
-                        <div class="home_group">
-                            <img src="assets/img/slide-1.png" alt="" class="home_img">
-
-                            <div class="home_indicator"></div>
-                     
-                                <div class="home_details-img">
-                                    <h4 class="home_details-title">The Card</h4>
-                                    <span class="home_details-subtitle">Woolen</span>
-                                </div>
-                        </div>
-
-                        <div class="home_data">
-                            <h3 class="home_subtitle">#1 Trending Item</h3>
-                            <h1 class="home_title">Original <br> is never <br> finished!</h1>
-                            <p class="home_description">A Specialist label creating luxury essentials.
-                                Ethically crafted with an unwavering commitment to exceptional quality.
-                            </p>
-                            <div class="home_buttons">
-                                <a href="#" class="button">Buy now</a>
-                                <a href="#" class="button--link button--flex">View Details 
-                                    <i class="bx bx-right-arrow-alt button_icon"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- Home Swiper 2-->
-                <section class="swiper-slide">
-                    <div class="home_content grid">
-                        <div class="home_group">
-                            <img src="assets/img/slide-2.png" alt="" class="home_img">
-
-                            <div class="home_indicator"></div>
-                     
-                                <div class="home_details-img">
-                                    <h4 class="home_details-title">The Jig</h4>
-                                    <span class="home_details-subtitle">Woolen</span>
-                                </div>
-                        </div>
-
-                        <div class="home_data">
-                            <h3 class="home_subtitle">#2 Trending Item</h3>
-                            <h1 class="home_title">Original <br> is never <br> finished!</h1>
-                            <p class="home_description">A Specialist label creating luxury essentials.
-                                Ethically crafted with an unwavering commitment to exceptional quality.
-                            </p>
-                            <div class="home_buttons">
-                                <a href="#" class="button">Buy now</a>
-                                <a href="#" class="button--link button--flex">View Details 
-                                    <i class="bx bx-right-arrow-alt button_icon"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- Home Swiper 3-->
-                <section class="swiper-slide">
-                    <div class="home_content grid">
-                        <div class="home_group">
-                            <img src="assets/img/slide-3.png" alt="" class="home_img">
-
-                            <div class="home_indicator"></div>
-                     
-                                <div class="home_details-img">
-                                    <h4 class="home_details-title">The lyn</h4>
-                                    <span class="home_details-subtitle">Woolen</span>
-                                </div>
-                        </div>
-
-                        <div class="home_data">
-                            <h3 class="home_subtitle">#3 Trending Item</h3>
-                            <h1 class="home_title">Original <br> is never <br> finished!</h1>
-                            <p class="home_description">A Specialist label creating luxury essentials.
-                                Ethically crafted with an unwavering commitment to exceptional quality.
-                            </p>
-                            <div class="home_buttons">
-                                <a href="#" class="button">Buy now</a>
-                                <a href="#" class="button--link button--flex">View Details 
-                                    <i class="bx bx-right-arrow-alt button_icon"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
+            <div class="swiper-wrapper" id="swiper-wrapper"></div>
             <div class="swiper-pagination"></div>
         </div>
-    </section>  
+    </section>
+     
     <section class="discount section">
         <div class="discount_container container grid">
             <img src="assets/img/discount.png" alt="" class="discount_img">
@@ -495,19 +411,91 @@
 
     <!-- Link to Bootstrap JS via CDN (optional) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    
     <script src="assets/js/swiper-bundle.min.js"></script>
-
     <!--=============== JS ===============-->
     <script src="assets/js/main.js"></script>
-    <script>
-    
-/*
-        fetch('https://fakestoreapi.com/products')
-                .then(res=>res.json())
-                .then(json=>console.log(json))
+    <script>// Fetch products from API and render top rated products
+       
+       fetch('https://fakestoreapi.com/products')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(products => {
+        const topCountProducts = getTopCountProducts(products, 10);
+        renderProducts(topCountProducts);
+    })
+    .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+        // Handle the error gracefully
+    });
 
-                */
+    function getTopCountProducts(products, count) {
+    // Sort the products by count in descending order
+    const sortedProducts = products.sort((a, b) => b.count - a.count);
+    // Get the top 'count' products
+    return sortedProducts.slice(0, count);
+}
+
+        
+        // Function to render products
+        function renderProducts(products) {
+    const swiperWrapper = document.querySelector('.swiper-wrapper');
+
+    // Clear existing content
+    swiperWrapper.innerHTML = '';
+
+    // Iterate over the products and generate HTML for each slide
+    products.forEach((product, index) => {
+        // Shorten the title to a desired length
+        const shortenedTitle = truncateString(product.title, 20); // Adjust the length as needed
+        // Shorten the description to 100 characters
+        const shortenedDescription = truncateString(product.description, 200);
+
+        const slideHTML = `
+            <section class="swiper-slide">
+                <div class="home_content grid">
+                    <div class="home_group">
+                        <img src="${product.image}" alt="${product.title}" class="home_img">
+                        <div class="home_indicator"></div>
+                        <div class="home_details-img">
+                            <h4 class="home_details-title">${shortenedTitle}</h4>
+                            <span class="home_details-subtitle">${product.category}</span>
+                        </div>
+                    </div>
+                    <div class="home_data">
+                        <h3 class="home_subtitle">#${index + 1} Trending Item</h3>
+                        <h1 class="home_title">${shortenedTitle}</h1>
+                        <p class="home_description">${shortenedDescription}</p>
+                        <div class="home_buttons">
+                            <a href="#" class="button">Buy now</a>
+                            <a href="#" class="button--link button--flex">View Details 
+                                <i class="bx bx-right-arrow-alt button_icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        `;
+
+        // Append slide HTML to the swiper wrapper
+        swiperWrapper.innerHTML += slideHTML;
+    });
+
+  
+}
+
+// Function to truncate a string to a specified length
+function truncateString(str, maxLength) {
+    if (str.length > maxLength) {
+        return str.substring(0, maxLength - 3) + '...'; // Append ellipsis if string is longer than maxLength
+    }
+    return str;
+}
+
+
     </script>
 
 
