@@ -259,9 +259,18 @@ input {
 /*========== HOME SECTION ==========*/
 .home_content{
     padding: 6rem 0 2rem;
+    width: 100%; /* Set width to 100% to cover entire viewport */
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     column-gap: 2rem;
 
+}
+.home_img{
+    background-color: white;
+    padding: 2rem;
+    border-radius: 2rem;
+    width: 400px; /* Set default width to 400px */
+    height: 400px; /* Set default height to 400px */
 }
 .home_group{
     display: grid;
@@ -888,6 +897,18 @@ input {
     right: 0;
     transition: .5s;
 }
+.heart-container {
+    position: relative;
+    display: inline-block;
+}
+
+.discount_img {
+    width: 200px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1;
+}
+
+
 
 /*=============== LIGHTBOX ===============*/
 
@@ -911,15 +932,25 @@ input {
 /* For large devices */
 @media screen and (max-width: 1200px) {
     .home_img{
+        width: 300px;
         height: 400px;
     }
     .swiper-pagination{
         margin-top: var(--mb-2)
     }
+    .home_content {
+        padding: 6rem 0 2rem;
+        width: 100%; /* Set width to 100% to cover entire viewport */
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        column-gap: 2rem;
+    }
+    
 
 }
 
 @media screen and (max-width: 992px) {
+    
 
     .steps_container {
         grid-template-columns: repeat(3, 1fr);
@@ -964,7 +995,10 @@ input {
 }
 
 /* For medium devices */
-@media screen and (max-width: 767px) {
+
+
+
+@media screen and (max-width: 736px) and (max-width: 767px) {
     body{
         margin: var(--header-height) 0 0 0;
     }
@@ -996,7 +1030,9 @@ input {
     right: 0;
     }
     .home_img{
-        height: 250px;
+        height: 400px;
+        width: 400px;
+        
     }
     .home_title{
         margin-bottom: var(--mb-1);
@@ -1015,10 +1051,18 @@ input {
 
 
 }
-
+@media screen  and (max-width: 736px) {
+    .home_img {
+        width: 190px; /* Set width to 180px for viewports between 568px and 736px */
+        height: 190px; /* Set height to 180px for viewports between 568px and 736px */
+    }
+}
 
 @media screen and (max-width: 576px) {
-
+    .home_img {
+        width: 200px; /* Set width to 200px for viewports <= 567px */
+        height: 200px; /* Set height to 200px for viewports <= 567px */
+    }
     .home-swiper{
         margin-top: -40px;
 
