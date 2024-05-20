@@ -1057,11 +1057,14 @@ input {
         height: 190px; /* Set height to 180px for viewports between 568px and 736px */
     }
 }
+@media screen and (max-width: 640px) {
+    .home_data{
+        padding: 1rem;
+    }
+}
 
 @media screen and (max-width: 576px) {
-    .home_data{
-        padding: 2rem;
-    }
+
     .home_img {
         width: 200px; /* Set width to 200px for viewports <= 567px */
         height: 200px; /* Set height to 200px for viewports <= 567px */
