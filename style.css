@@ -482,6 +482,51 @@ input {
 
 /*========== STEPS SECTION ==========*/
 
+.step{
+    margin-top: -100px;
+}
+.steps_bg {
+    background-color: var(--container-color);
+    padding: 3.5rem 2.5rem;
+    border-radius: 1rem;
+
+}
+.steps_container {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    padding-top: 1rem;
+    
+}
+.steps_card{
+    background-color: var(--body-color);
+    padding: 2.5rem 3rem 2rem 1.5rem;
+    border-radius: 1rem;
+}
+.steps_card-number{
+    display: inline-block;
+    background-color: var(--first-color);
+    color:#fff;
+    padding: .5rem .75rem;
+    border-radius: .25rem;
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--mb-1-5);
+    transition: .3s;
+}
+
+.steps_card-title{
+    font-size: var(--normal-font-size);
+    margin-bottom: var(--mb-0-5);
+    
+}
+
+.steps_card-description{
+    font-size: var(--small-font-size);
+
+}
+
+.steps_card:hover .steps_card-number{
+    transform: translateY(-.25rem);
+}
 
 /*========== NEWSLETTER SECTION ==========*/
 
@@ -718,7 +763,11 @@ input {
 @media screen and (max-width: 992px) {}
 
 /* For medium devices */
-@media screen and (max-width: 767px) {}
+@media screen and (max-width: 767px) {
+    .steps_container {
+    grid-template-columns: repeat(1, 1fr);
+    }
+}
 
 @media screen and (max-width: 576px) {
 
