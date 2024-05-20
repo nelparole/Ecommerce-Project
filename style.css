@@ -1059,6 +1059,9 @@ input {
 }
 
 @media screen and (max-width: 576px) {
+    .home_data{
+        padding: 2rem;
+    }
     .home_img {
         width: 200px; /* Set width to 200px for viewports <= 567px */
         height: 200px; /* Set height to 200px for viewports <= 567px */
