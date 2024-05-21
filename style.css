@@ -831,18 +831,24 @@ input {
     align-items: center;
     column-gap: 3rem;
 }
-.cart_box{
+.cart_box {
     background-color: var(--container-color);
-    padding:.75rem 1.25rem;
+    padding: .5rem 1.5rem;
     display: flex;
+    justify-content: center;
     align-items: center;
-}
-.cart img{
-    width: 85px;
+    width: 90px; /* Set a fixed width for the container */
+    height: 90px; /* Set a fixed height for the container */
 }
 
+.cart_box img {
+    width: 100%; /* Ensure the image takes up 100% of the container's width */
+    height: auto; /* Automatically adjust the height to maintain aspect ratio */
+}
+
+
 .cart_title{
-    font-size: var(--normal-font-size);
+    font-size: .7rem;
     margin-bottom: var(--mb-0-5);
 }
 .cart_price{
@@ -908,7 +914,13 @@ input {
     z-index: 1;
 }
 
+.new_img {
+    width: 200px;
+    height: 200px;
+    padding:30px;
 
+
+}
 
 /*=============== LIGHTBOX ===============*/
 
@@ -1056,7 +1068,8 @@ input {
         width: 190px; /* Set width to 180px for viewports between 568px and 736px */
         height: 190px; /* Set height to 180px for viewports between 568px and 736px */
     }
-}
+
+}  
 @media screen and (max-width: 640px) {
     .home_data{
         padding: 1rem;
