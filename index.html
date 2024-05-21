@@ -22,7 +22,7 @@
     <header class="header" id="header">
         <nav class="nav container">
             <a href="index.html" class="nav_logo">
-                <li class="bx bxs-shopping-bags nav_logo-icon"></li> E-shopper
+                <li class="bx bxs-shopping-bags nav_logo-icon"></li> NYP-Store
             </a>
             
             <div class="nav_menu" id="nav-menu">
@@ -61,89 +61,15 @@
         <div class="cart" id="cart">
             <i class="bx bx-x cart_close" id="cart-close"></i>
             <h2 class="cart_title-center"> My Cart</h2>
-            <div class="cart_container">
-                <article class="cart_card">
-                    <div class="cart_box">
-                        <img src="assets/img/cart-1.png" alt="" class="cart_img">
-                    </div>
-
-                    <div class="cart_details">
-                        <h3 class="cart_title">My Own</h3>
-                        <span class="cart_price">$12</span>
-
-                        <div class="cart_amount">
-                            <div class="cart_amount-content">
-                                <span class="cart_amount-box">
-                                    <i class="bx bx-minus"></i>
-                                </span>
-
-                                <span class="cart_amount-number">1</span>
-
-                                <span class="cart_amount-box">
-                                    <i class="bx bx-plus"></i>
-                                </span>
-                            </div>
-                            <i class="bx bx-trash-alt cart_amount-trash"></i>
-                        </div>
-                    </div>
-                </article>
-                <article class="cart_card">
-                    <div class="cart_box">
-                        <img src="assets/img/cart-2.png" alt="" class="cart_img">
-                    </div>
-
-                    <div class="cart_details">
-                        <h3 class="cart_title">Bag</h3>
-                        <span class="cart_price">$12</span>
-
-                        <div class="cart_amount">
-                            <div class="cart_amount-content">
-                                <span class="cart_amount-box">
-                                    <i class="bx bx-minus"></i>
-                                </span>
-
-                                <span class="cart_amount-number">1</span>
-                                <span class="cart_amount-box">
-                                    <i class="bx bx-plus"></i>
-                                </span>
-                            </div>
-                            <i class="bx bx-trash-alt cart_amount-trash"></i>
-                        </div>
-                    </div>
-                </article>
-                <article class="cart_card">
-                    <div class="cart_box">
-                        <img src="assets/img/cart-3.png" alt="" class="cart_img">
-                    </div>
-
-                    <div class="cart_details">
-                        <h3 class="cart_title">T-shirt</h3>
-                        <span class="cart_price">$12</span>
-
-                        <div class="cart_amount">
-                            <div class="cart_amount-content">
-                                <span class="cart_amount-box">
-                                    <i class="bx bx-minus"></i>
-                                </span>
-
-                                <span class="cart_amount-number">1</span>
-                                <span class="cart_amount-box">
-                                    <i class="bx bx-plus"></i>
-                                </span>
-                            </div>
-                            <i class="bx bx-trash-alt cart_amount-trash"></i>
-                        </div>
-                    </div>
-                </article>
-            </div>
-
+            <div class="cart_container" id="cart-container"></div>
             <div class="cart_prices">
-                <span class="cart_prices-item">3 items</span>
-                <span class="cart_prices-total">$28</span>
+                <span class="cart_prices-item" id="cart-total-items">0 items</span>
+                <span class="cart_prices-total" id="cart-total-price">$0</span>
             </div>
-
         </div>
     </section>
+    
+    
     <section id="my-Login">
         <div class="login" id="login">
             <i class="bx bx-x login_close" id="login-close"></i>
@@ -187,148 +113,47 @@
             </div>
         </div>
     </section>
+
+
     <section class="new section">
-        <h2 class="section__title">New Arrivals</h2>
+        <h2 class="section__title">Grab the Item on Sale<br> for Nearly 50% Off</h2>
         <div class="new_container container">
             <div class="swiper new-swiper">
                 <div class="swiper-wrapper">
-
-                    <!-- New Content 1-->
-                    <div class="new_content swiper-slide">
-                        <div class="new_tag">New</div>
-                            <img src="assets/img/new-1.png" alt="" class="new_img">
-                            <h3 class="new_title">Windbreaker Jacket</h3>
-                            <span class="new_subtitle">Accessory</span>
-            
-                            <div class="new_prices">
-                                <span class="new_price">$14.99</span>
-                                <span class="new_discount">$29.99</span>
-                            </div>
-            
-                            <a href="#" class="button new_button">
-                                <i class="bx bx-cart alt new_icon"></i>
-                            </a>
-                    </div>
-
-                    <!-- New Content 2-->
-                    <div class="new_content swiper-slide">
-                        <div class="new_tag">New</div>
-                            <img src="assets/img/new-2.png" alt="" class="new_img">
-                            <h3 class="new_title">Air Jordan Jacket</h3>
-                            <span class="new_subtitle">Accessory</span>
-            
-                            <div class="new_prices">
-                                <span class="new_price">$11.99</span>
-                                <span class="new_discount">$21.99</span>
-                            </div>
-            
-                            <a href="#" class="button new_button">
-                                <i class="bx bx-cart alt new_icon"></i>
-                            </a>
-                    </div>
-
-                    <!-- New Content 3-->
-                    <div class="new_content swiper-slide">
-                        <div class="new_tag">New</div>
-                            <img src="assets/img/new-3.png" alt="" class="new_img">
-                            <h3 class="new_title">Fur Jacket</h3>
-                            <span class="new_subtitle">Accessory</span>
-            
-                            <div class="new_prices">
-                                <span class="new_price">$4.99</span>
-                                <span class="new_discount">$9.99</span>
-                            </div>
-            
-                            <a href="#" class="button new_button">
-                                <i class="bx bx-cart alt new_icon"></i>
-                            </a>
-                    </div>
-                    
-                    <!-- New Content 4-->
-                    <div class="new_content swiper-slide">
-                        <div class="new_tag">New</div>
-                            <img src="assets/img/new-4.png" alt="" class="new_img">
-                            <h3 class="new_title">Fleece Jacket</h3>
-                            <span class="new_subtitle">Accessory</span>
-            
-                            <div class="new_prices">
-                                <span class="new_price">$29.99</span>
-                                <span class="new_discount">$44.99</span>
-                            </div>
-            
-                            <a href="#" class="button new_button">
-                                <i class="bx bx-cart alt new_icon"></i>
-                            </a>
-                    </div>
-
-                    <!-- New Content 5-->
-                    <div class="new_content swiper-slide">
-                        <div class="new_tag">New</div>
-                            <img src="assets/img/new-6.png" alt="" class="new_img">
-                            <h3 class="new_title">Nike Hoodie</h3>
-                            <span class="new_subtitle">Accessory</span>
-            
-                            <div class="new_prices">
-                                <span class="new_price">$7.99</span>
-                                <span class="new_discount">$14.99</span>
-                            </div>
-            
-                            <a href="#" class="button new_button">
-                                <i class="bx bx-cart alt new_icon"></i>
-                            </a>
-                    </div>
-
-                    <!-- New Content 6-->
-                    <div class="new_content swiper-slide">
-                        <div class="new_tag">New</div>
-                            <img src="assets/img/new-5.png" alt="" class="new_img">
-                            <h3 class="new_title">Fleece Jacket</h3>
-                            <span class="new_subtitle">Accessory</span>
-            
-                            <div class="new_prices">
-                                <span class="new_price">$14.99</span>
-                                <span class="new_discount">$29.99</span>
-                            </div>
-            
-                            <a href="#" class="button new_button">
-                                <i class="bx bx-cart alt new_icon"></i>
-                            </a>
-                    </div>
-                    
+                    <!-- New contents will be added dynamically -->
                 </div>
             </div>
         </div>
-
-
     </section>
+
     <section class="step section container">
         <div class="step_bg">
-            <h2 class="section_title text-center">How to order products <br> from E-shopper</h2>
+            <h2 class="section_title text-center">Steps to Order Products <br> from NYP-Store</h2>
         
             <div class="steps_container grid">
                 <!-- Step 1 -->
                 <div class="steps_card">
                     <div class="steps_card-number">01</div>
-                    <h3 class="steps_card-title">Choose Products</h3>
+                    <h3 class="steps_card-title">Explore Our Selection</h3>
                     <p class="steps_card-description">
-                        We have the several varities products you can choose from.
+                        Explore our wide range of product options to find exactly what you're looking for.
                     </p>
                 </div>
                 <!-- Step 2 -->
                 <div class="steps_card">
                     <div class="steps_card-number">02</div>
-                    <h3 class="steps_card-title">Place an order</h3>
+                    <h3 class="steps_card-title">Complete Your Purchase</h3>
                     <p class="steps_card-description">
-                        Once your order is set, we move to the next step which is the shipping.
+                        After placing your order, we swiftly proceed to the next step: shipping your items.
                     </p>
                 </div>
                 
                 <!-- Step 3 -->
                 <div class="steps_card">
                     <div class="steps_card-number">03</div>
-                    <h3 class="steps_card-title">Get order delivered</h3>
+                    <h3 class="steps_card-title">Receive Your Delivery</h3>
                     <p class="steps_card-description">
-                        Our delivery process is easy, you receive the order direct to your home.
+                        Our delivery process is seamless; your order is delivered directly to your doorstep.
                     </p>
                 </div>
                 
@@ -340,11 +165,11 @@
         <div class="newsletter_container container">
             <h2 class="section_title">Our Newsletter</h2>
             <div class="newsletter_description">
-                Promotion new products and sales. Directly to your inbox
+                Receive promotions for new products and sales directly in your inbox.
             </div>
             <form action="" class="newsletter_form">
                 <input type="text" placeholder="Enter your Email" class="newsletter_input">
-                <button class="button">Subcribe</button>
+                <button class="button">Join</button>
             </form>
         </div>
     </section>
@@ -356,9 +181,9 @@
         <!-- Footer content 1-->
         <div class="footer_content">
             <a href="#" class="footer_logo">
-                <i class="bx bxs-shopping-bags footer_logo-icon"></i>E-shopper
+                <i class="bx bxs-shopping-bags footer_logo-icon"></i>NYP-Store
             </a>
-            <p class="footer_description">Enjoy the biggest sale <br> of your life.</p>
+            <p class="footer_description">Experience the sale of a lifetime. <br> of your life.</p>
             <div class="footer_social">
                 <a href="#" class="footer_social-link"><i class="bx bxl-facebook"></i></a>
                 <a href="#" class="footer_social-link"><i class="bx bxl-instagram"></i></a>
@@ -415,35 +240,42 @@
     <!--=============== JS ===============-->
     <script src="assets/js/main.js"></script>
     <script>// Fetch products from API and render top rated products
-       
-       fetch('https://fakestoreapi.com/products')
+       // Fetch products from API and render top rated products
+fetch('https://fakestoreapi.com/products')
     .then(response => {
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
         return response.json();
+        
     })
     .then(products => {
         const topCountProducts = getTopCountProducts(products, 10);
         renderProducts(topCountProducts);
+        
+        // Find the product with the lowest price
+        const productWithLowestPrice = findProductWithLowestPrice(products);
+        populateDiscountSection(productWithLowestPrice);
+
+        const top5Products = products.slice(0, 3); // Get the top 5 products
+        renderCartItems(top5Products); // Pass top 5 products to the render function
     })
     .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
         // Handle the error gracefully
     });
 
-    function getTopCountProducts(products, count) {
+// Function to get top count products
+function getTopCountProducts(products, count) {
     // Sort the products by count in descending order
     const sortedProducts = products.sort((a, b) => b.count - a.count);
     // Get the top 'count' products
     return sortedProducts.slice(0, count);
 }
 
-        
-        // Function to render products
-        function renderProducts(products) {
+// Function to render products
+function renderProducts(products) {
     const swiperWrapper = document.querySelector('.swiper-wrapper');
-
     // Clear existing content
     swiperWrapper.innerHTML = '';
 
@@ -483,8 +315,6 @@
         // Append slide HTML to the swiper wrapper
         swiperWrapper.innerHTML += slideHTML;
     });
-
-  
 }
 
 // Function to truncate a string to a specified length
@@ -495,8 +325,86 @@ function truncateString(str, maxLength) {
     return str;
 }
 
+// Function to find the product with the lowest price
+function findProductWithLowestPrice(products) {
+    if (!products || products.length === 0) {
+        return null; // Return null if there are no products
+    }
 
-    </script>
+    // Initialize with the first product as the one with the lowest price
+    let lowestPriceProduct = products[0];
+
+    // Iterate over the products to find the one with the lowest price
+    for (let i = 1; i < products.length; i++) {
+        if (products[i].price < lowestPriceProduct.price) {
+            lowestPriceProduct = products[i];
+        }
+    }
+
+    return lowestPriceProduct;
+}
+
+// Function to populate the discount section with the product with the lowest price
+function populateDiscountSection(product) {
+    if (!product) return;
+    const discountContainer = document.querySelector('.discount_container');
+
+    discountContainer.innerHTML = `
+        <img src="${product.image}" alt="${product.title}" class="discount_img">
+        <div class="discount_data">
+            <h2 class="discount_title">Get the Lowest Price <br> ${product.category}</h2>
+            <a href="#" class="button">Price: $ ${product.price}</a>
+        </div>
+    `;
+}
+
+// Function to render the cart items
+function renderCartItems(products) {
+    const cartContainer = document.getElementById('cart-container');
+    const cartTotalItems = document.getElementById('cart-total-items');
+    const cartTotalPrice = document.getElementById('cart-total-price');
+
+    // Clear existing content
+    cartContainer.innerHTML = '';
+    let totalPrice = 0;
+
+    // Loop through each product and generate HTML
+    products.forEach(product => {
+        const cartItemHTML = `
+            <article class="cart_card">
+                <div class="cart_box">
+                    <img src="${product.image}" alt="${product.title}" class="cart_img">
+                </div>
+                <div class="cart_details">
+                    <h3 class="cart_title">${product.title}</h3>
+                    <span class="cart_price">$${product.price}</span>
+
+                    <div class="cart_amount">
+                            <div class="cart_amount-content">
+                                <span class="cart_amount-box">
+                                    <i class="bx bx-minus"></i>
+                                </span>
+
+                                <span class="cart_amount-number">1</span>
+
+                                <span class="cart_amount-box">
+                                    <i class="bx bx-plus"></i>
+                                </span>
+                            </div>
+                            <i class="bx bx-trash-alt cart_amount-trash"></i>
+                        </div>
+                </div>
+            </article>
+        `;
+        cartContainer.innerHTML += cartItemHTML;
+        totalPrice += product.price;
+    });
+
+    // Update total items count and total price
+    cartTotalItems.textContent = `${products.length} items`;
+    cartTotalPrice.textContent = `$${totalPrice.toFixed(2)}`; // Format total price with 2 decimal places
+}
+</script>
 
 
 
